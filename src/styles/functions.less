@@ -1,0 +1,20 @@
+/*
+ * Copyright (c) 2019-Now Asako Studio, All rights reseved.
+ * @fileoverview | less function
+ * @Author: mukuashi | mukuashi@icloud.com
+ * @version 0.1 | 2019-04-20 // Initial version.
+ * @Date:   2019-04-20 18:20:27
+ * @Last Modified by: mukuashi
+ * @Last Modified time: 2019-04-30 17:41:16
+*/
+//去掉一个值的单位，如12px => 12
+.strip-units(@number,@property:font-size) { 
+  @value: @number / (@number * 0 + 1);
+  @{property}: ~"@{value}";
+}
+//px -> rem 使用方式如rem(300px)
+.rem(@sizeValue,@property:font-size) {
+  @fontSizeStandard: 10 / 750rem;
+  @remValue: (@sizeValue * @fontSizeStandard);
+  @{property}: ~"@{remValue}";
+}

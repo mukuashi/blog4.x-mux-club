@@ -1,0 +1,72 @@
+//base core
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: 'Monospaced Number', 'Chinese Quote', 'Helvetica Neue For Number',
+  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB',
+  'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  //页面里的字体变清晰
+  -webkit-font-smoothing: antialiased;
+  //点击高亮hidden，偏移动端
+  -webkit-tap-highlight-color:transparent;
+  //启用浏览器文本溢出算法|100%放大
+  text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+}
+//
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+header,footer,section,article {
+  text-align: inherit;
+}
+button{
+  margin: 0;
+  border-radius: 0;
+  outline:none;
+}
+ul li{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: color .3s;
+  -webkit-text-decoration-skip: objects;
+  &:focus,&:hover,&:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+::-webkit-input-placeholder {
+  opacity: .5;
+  font-size: .45rem;
+  color: #ccc;
+}
+:-moz-placeholder {/* Firefox 18- */
+  opacity: .5;
+  font-size: .45rem;
+  color: #ccc;
+}
+::-moz-placeholder{/* Firefox 19+ */
+  opacity: .5;
+  font-size: .45rem;
+  color: #ccc;
+}
+:-ms-input-placeholder {
+  opacity: .5;
+  font-size: .45rem;
+  color: #ccc;
+}
