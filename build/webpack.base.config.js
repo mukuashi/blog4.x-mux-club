@@ -85,10 +85,27 @@ module.exports = {
       {
         test: /\.(le|c)ss$/,
         use: [
-          isProd ? MiniCssExtractPlugin.loader : "vue-style-loader",
+          isProd
+            ? {
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  esModule: true
+                }
+              }
+            : "vue-style-loader",
           "css-loader",
           postcssConfig,
-          "less-loader"
+          "less-loader",
+          {
+            loader: "style-resources-loader",
+            options: {
+              patterns: [
+                path.resolve(__dirname, "../src/styles/mixin.less"),
+                path.resolve(__dirname, "../src/styles/animate.less")
+              ],
+              injector: "append"
+            }
+          }
         ]
       }
     ]

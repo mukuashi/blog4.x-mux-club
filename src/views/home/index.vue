@@ -1,5 +1,5 @@
 <template>
-  <article class="home">
+  <article class="home animation-scale-up">
     <h1>{{app.name}}</h1>
   </article>
 </template>

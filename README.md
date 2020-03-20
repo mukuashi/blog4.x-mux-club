@@ -27,6 +27,7 @@ Blog 4.x built with Vue 2.x + vue-router + vuex, with server-side rendering.
 ## Upgrade Log
 
 - 构建工具 Webpack 由 3.x 升级到 4.x，更新了处理 js、css 的 loader 和 plugins
+- 引入 style-resources-loader，全局引入 mixin 和 function、animate less，组件和业务层不用重复 import，聚合 less 的使用能力和场景
 
 ## A Note on Performance
 
